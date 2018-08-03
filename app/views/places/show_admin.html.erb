@@ -1,0 +1,22 @@
+<div class="container-fluid" align="center">
+
+  <p><%= link_to 'Edycja', edit_place_path(@place), class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+      <%= link_to 'Lista', places_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+      <%= link_to 'Podgląd', @place, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %></p>
+
+  <p>Tytuł: <strong><%= @place.name %></strong></p>
+  <p>Status: <strong><%= @place.status %></strong></p>
+  <p>Opis: <strong><%= @place.desc %></strong></p>
+
+  <p>LAT <strong><%= @place.latitude %></strong></p>
+  <p>LNG <strong><%= @place.longitude %></strong></p>
+
+  <h5>Lokalizacja</h5><hr>
+  <div align="center">
+    <iframe width="720" height="400" frameborder="0" style="border:0"
+     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCx3WpXtmfwjePmkgLqXZnV7VvM03i0ICE&q=<%= @place.latitude %>,<%= @place.longitude %>"
+     allowfullscreen>
+    </iframe>
+  </div>
+
+</div>

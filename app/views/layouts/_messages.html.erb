@@ -1,0 +1,7 @@
+<% flash.each do |name, msg| %>
+  <br>
+  <div class="alert alert-info container" role="alert">
+    <button class="close" data-dismiss="alert">×</button>
+    <%= content_tag :div, msg %>
+  </div>
+<% end %>

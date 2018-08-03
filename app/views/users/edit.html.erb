@@ -1,0 +1,17 @@
+<% content_for :title, "edycja uzytkownika" %>
+
+<div class="container">
+  <h5>Edycja użytkownika</h5><hr>
+  <%= form_for @user, :url => { :action => "update" } do |f| %>
+  <div>
+    <div class="form-group">
+      <label>Email</label>
+      <%= f.text_field :email, type:"text", autofocus: true, class:"form-control", placeholder: "email" %>
+    </div>
+  </div>
+  <div align="center">
+    <p><%= f.submit :Zatwierdź, class:"btn btn-success btn-block" %></p>
+    <p><%= link_to 'Lista użytkowników', pages_users_path, class:'btn btn-primary btn-block' %></p>
+  </div>
+  <% end %>
+</div>

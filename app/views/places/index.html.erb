@@ -1,0 +1,31 @@
+<% content_for :title, "Lista miejsc" %>
+<div class="container-fluid" align="center">
+
+  <div class="table-responsive" align="center">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nazwa</th>
+          <th>Status</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>Akcje</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @places.each do |place| %>
+          <tr>
+            <td><%= place.name %></td>
+            <td><%= "Aktywny" if place.status %><%= "Nieaktywny" unless place.status %></td>
+            <td><%= place.latitude %></td>
+            <td><%= place.longitude %></td>
+            <td><%= link_to 'Podgląd', place, class:'btn btn-xs btn-warning' %>
+                <%= link_to 'Przejdź', place_show_admin_path(place_id:place.id, id:place.id), class:'btn btn-xs btn-warning' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>

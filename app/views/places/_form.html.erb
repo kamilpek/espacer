@@ -1,0 +1,47 @@
+<%= form_with(model: place, local: true) do |form| %>
+  <% if place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+      <% place.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div align="center">
+    <p><%= form.submit "Zatwierdź", class:"btn btn-success btn-block" %></p>
+    <p><%= link_to 'Lista miejsc', places_path, class:"btn btn-primary btn-block" %></p>
+  </div>
+
+  <div class="form-group">
+    <label>Nazwa</label>
+    <%= form.text_field :name, class:"form-control", required: true %>
+  </div>
+
+  <div class="form-group">
+    <label>Aktywny</label>
+    <%= form.select :status, options_for_select([["Aktywny", true], ["Nieaktywny", false]], @place.status), {}, {class:"form-control"} %>
+  </div>
+
+  <div class="form-group">
+    <label>Opis</label>
+    <%= form.text_area :desc, class:"form-control", required: true %>
+  </div>
+
+  <div class="form-group">
+    <label>Obraz</label>
+     <%= form.file_field :image, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Miniatura</label>
+     <%= form.file_field :thumb, class:"form-control" %>
+  </div>
+
+  <%= form.hidden_field :latitude %>
+  <%= form.hidden_field :longitude %>
+
+<% end %>
