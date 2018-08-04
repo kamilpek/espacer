@@ -1,6 +1,6 @@
 <% content_for :title, @place.name %>
 <div class="container-fluid" align="center">
   <div class="wrapper">
-    <iframe allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.4/pannellum.htm?panorama=<%= @place.image.url %>&amp;autoLoad=true"></iframe>
+    <iframe allowfullscreen style="border-style:none;" class="resp-iframe" src="https://cdn.pannellum.org/2.4/pannellum.htm?panorama=<%= @place.image.url %>&amp;title=<%= @place.name %>&amp;autoLoad=true"></iframe>
   </div>
 </div>

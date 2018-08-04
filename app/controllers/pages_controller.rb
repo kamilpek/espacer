@@ -7,11 +7,11 @@ class PagesController < ApplicationController
       marker.lng place.longitude
       marker.infowindow render_to_string(:partial => "infowindow", :locals => { :object => place.id, :name => place.name, :image_thumb => place.thumb.url})
       marker.picture({
-                      :url    => "http://res.cloudinary.com/traincms-herokuapp-com/image/upload/c_scale,h_17,w_15/v1502900938/bluedot_spc6oq.png",
-                      :width  => 16,
-                      :height => 16,
-                      :scaledWidth => 32, # Scaled width is half of the retina resolution; optional
-                      :scaledHeight => 32, # Scaled width is half of the retina resolution; optional
+                      :url    => "http://res.cloudinary.com/traincms-herokuapp-com/image/upload/c_scale,w_32/v1533410636/dotka_mswdg8.png",
+                      :width  => 32,
+                      :height => 32,
+                      :scaledWidth => 64, # Scaled width is half of the retina resolution; optional
+                      :scaledHeight => 64, # Scaled width is half of the retina resolution; optional
                      })
     end
   end
