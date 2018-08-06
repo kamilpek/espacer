@@ -1,2 +1,13 @@
-<h1>Pages#control</h1>
-<p>Find me in app/views/pages/control.html.erb</p>
+<div class="container">
+  <h5>Panel administratora</h5><hr>
+  <div align="center">
+    <%= link_to 'Panoramy',places_path, :title => "Panoramy", class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+    <%= link_to 'Nowe miejsce', new_place_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+    <%= link_to 'Mapa', pages_home_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+    <hr>
+    <%= link_to 'Użytkownicy', pages_users_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+    <hr>
+    <%= link_to 'Wyloguj', destroy_user_session_path, :method => :delete, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+    <hr>
+  </div>
+</div>

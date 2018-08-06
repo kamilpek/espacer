@@ -1,24 +1,14 @@
-# README
+# espacer.solectwolubiana.pl
+## solectwolubiana.pl
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+wirtualny spacer dla zdjęć 360 stopni
 
-Things you may want to cover:
+### Used software
+* [ruby](https://github.com/ruby/ruby)
+* [rails](https://github.com/rails/rails)
+* [gmaps4rails](https://github.com/apneadiving/Google-Maps-for-Rails)
+* [pannellum](https://github.com/mpetroff/pannellum)
+* [cloudinary](https://github.com/cloudinary/cloudinary_gem)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Autor
+* [Kamil Pek](https://github.com/kamilpek)

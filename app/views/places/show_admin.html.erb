@@ -1,22 +1,18 @@
-<div class="container-fluid" align="center">
-
+<div class="container">
+  <h5>Podgląd miejsca</h5><hr>
   <p><%= link_to 'Edycja', edit_place_path(@place), class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
-      <%= link_to 'Lista', places_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+      <%= link_to 'Lista miejsc', places_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
       <%= link_to 'Podgląd', @place, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %></p>
+  <hr>
 
   <p>Tytuł: <strong><%= @place.name %></strong></p>
   <p>Status: <strong><%= @place.status %></strong></p>
   <p>Opis: <strong><%= @place.desc %></strong></p>
-
+  <h5>Lokalizacja</h5><hr>
   <p>LAT <strong><%= @place.latitude %></strong></p>
   <p>LNG <strong><%= @place.longitude %></strong></p>
-
-  <h5>Lokalizacja</h5><hr>
-  <div align="center">
-    <iframe width="720" height="400" frameborder="0" style="border:0"
-     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCx3WpXtmfwjePmkgLqXZnV7VvM03i0ICE&q=<%= @place.latitude %>,<%= @place.longitude %>"
-     allowfullscreen>
-    </iframe>
-  </div>
-
+  <%= link_to "Mapy Google", "https://maps.google.com/maps?ll=#{@place.latitude},#{@place.longitude}&q=#{@place.latitude},#{@place.longitude}", class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+  <hr>
+  <%= link_to "Panel administratora", pages_control_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+  <hr>
 </div>

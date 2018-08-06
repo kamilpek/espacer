@@ -1,6 +1,6 @@
-<% content_for :title, "Lista miejsc" %>
-<div class="container-fluid" align="center">
-
+<% content_for :title, "Lista miejsc – " %>
+<div class="container">
+  <h5>Lista miejsc</h5><hr>
   <div class="table-responsive" align="center">
     <table class="table table-striped">
       <thead class="thead-dark">
@@ -12,7 +12,6 @@
           <th>Akcje</th>
         </tr>
       </thead>
-
       <tbody>
         <% @places.each do |place| %>
           <tr>
@@ -27,5 +26,8 @@
       </tbody>
     </table>
   </div>
-
+  <hr>
+  <%= link_to 'Nowe miejsce', new_place_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
+  <hr>
+  <%= link_to "Panel administratora", pages_control_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
 </div>

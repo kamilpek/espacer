@@ -1,4 +1,8 @@
-<% content_for :title, @place.name %>
-<iframe allowfullscreen src="https://cdn.pannellum.org/2.4/pannellum.htm?panorama=<%= @place.image.url %>&amp;title=<%= @place.name %>&amp;autoLoad=true" frameborder="0" scrolling="no"></iframe>
+<% content_for :title, "#{@place.name} – " %>
+<% if request.variant.any? %>
+  <iframe allowfullscreen src="https://cdn.pannellum.org/2.4/pannellum.htm?panorama=<%= @place.image.url(:mobile) %>&amp;title=<%= @place.name %>&amp;autoLoad=true" frameborder="0" scrolling="no"></iframe>
+<% else %>
+  <iframe allowfullscreen src="https://cdn.pannellum.org/2.4/pannellum.htm?panorama=<%= @place.image.url %>&amp;title=<%= @place.name %>&amp;autoLoad=true" frameborder="0" scrolling="no"></iframe>
+<% end %>
 <%= link_to "Powrót do mapy", pages_home_path, title:"Powrót do mapy", class:"btn btn-lg btn-static" %>
 <%= link_to (image_tag "solectwo_logo.png", class:"img-static"), "http://solectwolubiana.pl" %>

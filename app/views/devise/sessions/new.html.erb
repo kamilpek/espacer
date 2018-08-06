@@ -1,7 +1,6 @@
-<% content_for :title, "Logowanie" %>
-<div class="container-fluid">
-
-  <h4>Logowanie</h4><hr>
+<% content_for :title, "Logowanie – " %>
+<div class="container">
+  <h5>Logowanie</h5><hr>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <form class="form-signin">
       <div class="form-group">

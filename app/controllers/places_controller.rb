@@ -1,6 +1,7 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy, :show_admin]
   before_action :authenticate_user!, only: [:index, :edit, :update, :destroy, :show_admin]
+  before_action :detect_device_variant, only: [:show]
 
   # GET /places
   # GET /places.json
@@ -74,5 +75,9 @@ class PlacesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
       params.require(:place).permit(:name, :status, :desc, :image, :thumb, :latitude, :longitude)
+    end
+
+    def detect_device_variant
+      request.variant = :phone if browser.device.mobile?
     end
 end

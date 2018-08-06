@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @hash = Gmaps4rails.build_markers(@places) do |place, marker|
       marker.lat place.latitude
       marker.lng place.longitude
-      marker.infowindow render_to_string(:partial => "infowindow", :locals => { :object => place.id, :name => place.name, :image_thumb => place.thumb.url})
+      marker.infowindow render_to_string(:partial => "infowindow", :locals => { :object => place.id, :name => place.name, :desc => place.desc, :image_thumb => place.thumb.url})
       marker.picture({
                       :url    => "http://res.cloudinary.com/traincms-herokuapp-com/image/upload/c_scale,w_32/v1533410636/dotka_mswdg8.png",
                       :width  => 32,

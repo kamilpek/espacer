@@ -73,3 +73,4 @@ gem 'mini_magick', '~> 4.8' # images
 gem 'cloudinary', '~> 1.9', '>= 1.9.1' # images
 gem 'underscore-rails', '~> 1.8', '>= 1.8.3' #needed for gmaps
 gem 'gmaps4rails', '~> 2.1', '>= 2.1.2' #google maps for rails
+gem 'browser', '~> 2.5', '>= 2.5.3' # check browser
