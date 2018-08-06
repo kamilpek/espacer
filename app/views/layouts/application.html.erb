@@ -24,31 +24,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <%= render 'layouts/header' %>
-        <%= render partial: 'layouts/messages', flash: flash %>
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-          <div class="sidebar-sticky">
-            <h5>Miejsca do zwiedzenia</h5>
-            <% @places.each do |place| %>
-              <%= link_to place.name, place, :title => "Panoramy", class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
-            <% end %>
-            <% if user_signed_in? %>
-              <%= link_to 'Panoramy',places_path, :title => "Panoramy", class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
-              <%= link_to 'Nowe miejsce', new_place_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
-              <%= link_to 'Użytkownicy', pages_users_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
-              <%= link_to 'Wyloguj', destroy_user_session_path, :method => :delete, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
-            <% end %>
-            <div class="footer-copyright text-center py-3">
-              <%= link_to (image_tag "solectwo_logo.png", class:"full-img"), "http://solectwolubiana.pl" %>
-              <p style="padding-top: .6rem;"><%= "\u00A9 #{DateTime.now.utc.strftime("%Y")}" %></p>
-            </div>
-          </div>
-        </nav>
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-            <%= yield %>
-          </div>
-        </main>
+        <%= yield %>
       </div>
     </div>
   </body>

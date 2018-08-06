@@ -57,21 +57,10 @@ img {
 }
 
 // iframe resposnive
-.wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-}
-.wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+iframe {
+  height:calc(100vh);
+  width:calc(100vw);
+  box-sizing: border-box;
 }
 
 // dashboard.css from getbootstrap.com
@@ -230,19 +219,38 @@ body {
  */
 
 .iframe-container{
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+  height:calc(100vh);
+  width:calc(100vw);
+  box-sizing: border-box;
 }
-.iframe-container > *{
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+
+.btn-static {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  background-color: #005CA9;
+  border-color: #005CA9;
+}
+
+.btn-static:hover {
+  color: #fff;
+  background-color: #005CA9;
+  border-color: #005CA9;
+}
+
+.img-static {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20%;
+  height: auto;
+}
+
+.img-static-home {
+  position: absolute;
+  bottom: 5px;
+  left: 40%;
+  width: 20%;
+  height: auto;
 }
