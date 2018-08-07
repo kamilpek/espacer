@@ -138,6 +138,28 @@ body {
   border-color: #005CA9;
 }
 
+.btn-nearbys {
+  color: #fff;
+  background-color: #005CA9;
+  border-color: #005CA9;
+  width: 100% !important;
+  margin-bottom: .5rem;
+}
+
+.btn-nearbys:hover {
+  color: #fff;
+  background-color: #005CA9;
+  border-color: #005CA9;
+}
+
+.nearbys {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  text-shadow: -1px 0 #005CA9, 0 1px #005CA9, 1px 0 #005CA9, 0 -1px #005CA9;
+}
+
 .img-static {
   position: absolute;
   bottom: 10px;
@@ -155,5 +177,5 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  padding-top: 10px; 
+  padding-top: 15px;
 }

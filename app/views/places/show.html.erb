@@ -4,5 +4,11 @@
 <% else %>
   <iframe allowfullscreen src="https://cdn.pannellum.org/2.4/pannellum.htm?panorama=<%= @place.image.url %>&amp;title=<%= "#{@place.name} – #{@place.visits} odwiedzin" %>&amp;autoLoad=true" frameborder="0" scrolling="no"></iframe>
 <% end %>
-<%= link_to "Powrót do mapy", pages_home_path, title:"Powrót do mapy", class:"btn btn-lg btn-static" %>
+<div class="nearbys">
+  <%= link_to "Powrót do mapy", pages_home_path, title:"Powrót do mapy", class:"btn btn-lg btn-nearbys" %>
+  <h5 align="center">Najbliższe panoramy</h5><hr>
+  <% for place in @place.nearbys(3).last(5) %>
+    <%= link_to place.name, place, class:"btn btn-sm btn-nearbys" %>
+  <% end %>
+</div>
 <%= link_to (image_tag "solectwo_logo.png", class:"img-static"), "http://solectwolubiana.pl" %>

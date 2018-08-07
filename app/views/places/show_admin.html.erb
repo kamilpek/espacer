@@ -14,6 +14,10 @@
   <p>LNG <strong><%= @place.longitude %></strong></p>
   <%= link_to "Mapy Google", "https://maps.google.com/maps?ll=#{@place.latitude},#{@place.longitude}&q=#{@place.latitude},#{@place.longitude}", class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
   <hr>
+  <% for place in @place.nearbys(3).last(2) %>
+    <p><%= link_to place.name, place %></p>
+  <% end %>
+  <hr>
   <%= link_to "Panel administratora", pages_control_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
   <hr>
 </div>
