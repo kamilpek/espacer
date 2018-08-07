@@ -12,6 +12,7 @@ class PlacesController < ApplicationController
   # GET /places/1
   # GET /places/1.json
   def show
+    visited
   end
 
   def show_admin
@@ -74,10 +75,14 @@ class PlacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:name, :status, :desc, :image, :thumb, :latitude, :longitude)
+      params.require(:place).permit(:name, :status, :desc, :image, :thumb, :latitude, :longitude, :visits)
     end
 
     def detect_device_variant
       request.variant = :phone if browser.device.mobile?
+    end
+
+    def visited
+      @place.update(visits:@place.visits.to_i+1)
     end
 end

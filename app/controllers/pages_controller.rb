@@ -7,7 +7,7 @@ class PagesController < ApplicationController
       marker.lng place.longitude
       marker.infowindow render_to_string(:partial => "infowindow", :locals => { :object => place.id, :name => place.name, :desc => place.desc, :image_thumb => place.thumb.url})
       marker.picture({
-                      :url    => "http://res.cloudinary.com/traincms-herokuapp-com/image/upload/c_scale,w_32/v1533410636/dotka_mswdg8.png",
+                      :url    => "http://res.cloudinary.com/traincms-herokuapp-com/image/upload/v1533622898/dotka_sxlb2u.png",
                       :width  => 32,
                       :height => 32,
                       :scaledWidth => 64, # Scaled width is half of the retina resolution; optional
