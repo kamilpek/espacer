@@ -142,8 +142,9 @@ body {
   color: #fff;
   background-color: #005CA9;
   border-color: #005CA9;
-  width: 100% !important;
-  margin-bottom: .5rem;
+  // width: 100% !important;
+  display:block;
+  margin-bottom: .3rem;
 }
 
 .btn-nearbys:hover {
@@ -171,6 +172,14 @@ body {
 .img-static-home {
   position: absolute;
   bottom: 5px;
+  left: 40%;
+  width: 20%;
+  height: auto;
+}
+
+.img-static-home-head {
+  position: absolute;
+  top: 5px;
   left: 40%;
   width: 20%;
   height: auto;
