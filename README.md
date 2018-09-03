@@ -1,9 +1,9 @@
-# espacer.solectwolubiana.pl
-## solectwolubiana.pl
+# [espacer.solectwolubiana.pl](http://espacer.solectwolubiana.pl)
+## [solectwolubiana.pl](http://solectwolubiana.pl)
 
 wirtualny spacer dla panoram 360 stopni
 
-### Used software
+### Technologie
 * [ruby](https://github.com/ruby/ruby)
 * [rails](https://github.com/rails/rails)
 * [gmaps4rails](https://github.com/apneadiving/Google-Maps-for-Rails)

@@ -4,19 +4,15 @@
       <%= link_to 'Lista miejsc', places_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
       <%= link_to 'Podgląd', @place, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %></p>
   <hr>
-
+  <h5>Parametry</h5><hr>
   <p>Tytuł: <strong><%= @place.name %></strong></p>
-  <p>Status: <strong><%= @place.status %></strong></p>
   <p>Opis: <strong><%= @place.desc %></strong></p>
+  <p>Status: <strong><%= "Aktywny" if @place.status %><%= "Nieaktywny" unless @place.status %></strong></p>
   <p>Wizyt: <strong><%= @place.visits %></strong></p>
   <h5>Lokalizacja</h5><hr>
   <p>LAT <strong><%= @place.latitude %></strong></p>
   <p>LNG <strong><%= @place.longitude %></strong></p>
   <%= link_to "Mapy Google", "https://maps.google.com/maps?ll=#{@place.latitude},#{@place.longitude}&q=#{@place.latitude},#{@place.longitude}", class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
-  <hr>
-  <% for place in @place.nearbys(3).last(2) %>
-    <p><%= link_to place.name, place %></p>
-  <% end %>
   <hr>
   <%= link_to "Panel administratora", pages_control_path, class:"btn btn-sm btn-solectwo btn-outline-solectwo" %>
   <hr>

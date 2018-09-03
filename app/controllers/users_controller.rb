@@ -9,10 +9,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def notes
-    @user = User.find(params[:id])
-  end
-
   def create
     @user = User.new(user_params)
 
@@ -30,17 +26,6 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.update(user_params_edit)
         format.html { redirect_to admin_users_path, notice: 'Użytkownik zmodyfikowany.' }
-      else
-        format.html { render :edit }
-      end
-    end
-  end
-
-  def addnotes
-    @user = User.find(params[:id])
-    respond_to do |format|
-      if @user.update(user_params_notes)
-        format.html { redirect_to tickets_path, notice: 'Dodano notatke.' }
       else
         format.html { render :edit }
       end
@@ -74,10 +59,6 @@ class UsersController < ApplicationController
     user.update_attribute(:sign_in_count, 0)
     user.save
     redirect_to admin_users_path, notice: "Zresetowano hasło."
-  end
-
-  def holiday
-    @user = User.find(params[:id])
   end
 
   def set_user
