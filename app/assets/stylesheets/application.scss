@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require leaflet
  */
 
 @import "bootstrap";
@@ -117,7 +118,7 @@ body {
  * gmaps
  */
 
-.iframe-container{
+ .iframe-container{
   height:calc(100vh);
   width:calc(100vw);
   box-sizing: border-box;
@@ -130,12 +131,14 @@ body {
   color: #fff;
   background-color: #005CA9;
   border-color: #005CA9;
+  z-index: 9;
 }
 
 .btn-static:hover {
   color: #fff;
   background-color: #005CA9;
   border-color: #005CA9;
+  z-index: 9;
 }
 
 .btn-nearbys {
@@ -145,12 +148,14 @@ body {
   // width: 100% !important;
   display:block;
   margin-bottom: .3rem;
+  z-index: 9;
 }
 
 .btn-nearbys:hover {
   color: #fff;
   background-color: #005CA9;
   border-color: #005CA9;
+  z-index: 9;
 }
 
 .nearbys {
@@ -159,6 +164,7 @@ body {
   right: 10px;
   color: white;
   text-shadow: -1px 0 #005CA9, 0 1px #005CA9, 1px 0 #005CA9, 0 -1px #005CA9;
+  z-index: 9;
 }
 
 .img-static {
@@ -167,6 +173,7 @@ body {
   right: 10px;
   width: 20%;
   height: auto;
+  z-index: 9;
 }
 
 .img-static-home {
@@ -175,6 +182,7 @@ body {
   left: 40%;
   width: 20%;
   height: auto;
+  z-index: 9;
 }
 
 .img-static-home-head {
@@ -183,8 +191,17 @@ body {
   left: 40%;
   width: 20%;
   height: auto;
+  z-index: 9;
 }
 
 h1, h2, h3, h4, h5, h6 {
   padding-top: 15px;
 }
+
+#map {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+

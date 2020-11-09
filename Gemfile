@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.0'
+ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -72,6 +72,6 @@ gem 'rmagick', '~> 2.16' # images
 gem 'mini_magick', '~> 4.8' # images
 gem 'cloudinary', '~> 1.9', '>= 1.9.1' # images
 gem 'underscore-rails', '~> 1.8', '>= 1.8.3' #needed for gmaps
-gem 'gmaps4rails', '~> 2.1', '>= 2.1.2' #google maps for rails
 gem 'browser', '~> 2.5', '>= 2.5.3' # check browser
 gem 'geocoder', '~> 1.5' # geocoder
+gem 'leaflet-rails', '~> 1.7' # maps
